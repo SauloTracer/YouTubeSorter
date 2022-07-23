@@ -1,0 +1,24 @@
+{
+    "manifest_version": 3,
+    "name": "YouTube Video Sorter",
+    "version": "0.1",
+    "content_scripts": [
+        {
+            "matches": [
+                "http://www.youtube.com/watch?*",
+                "https://www.youtube.com/watch?*"
+            ],
+            "js": ["./js/content.js"]
+        }
+    ],
+    "permissions": [
+        "tabs",
+        "activeTab"
+    ],
+    "background": {
+        "service_worker": "./js/background.js"
+    },
+    "action": {
+        "default_icon": "./img/sort.png"
+    }
+}
