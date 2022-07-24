@@ -1,12 +1,14 @@
 {
     "manifest_version": 3,
     "name": "YouTube Video Sorter",
-    "version": "0.1",
+    "version": "0.2",
     "content_scripts": [
         {
             "matches": [
                 "http://www.youtube.com/watch?*",
-                "https://www.youtube.com/watch?*"
+                "https://www.youtube.com/watch?*",
+                "http://www.youtube.com/shorts*",
+                "https://www.youtube.com/shorts*"  
             ],
             "js": ["./js/content.js"]
         }
